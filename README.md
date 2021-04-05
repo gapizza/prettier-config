@@ -2,5 +2,5 @@
 Node-focused prettier config
 
 ```bash
-npm i -D @ehacke/prettier-config
+npm i -D @gapizza/prettier-config
 ```
