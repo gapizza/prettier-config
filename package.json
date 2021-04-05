@@ -1,29 +1,28 @@
 {
-  "name": "@ehacke/prettier-config",
+  "name": "@gapizza/prettier-config",
   "description": "Node-focused prettier config",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "author": "Eric Hacke",
   "bugs": {
-    "url": "https://github.com/ehacke/prettier-config/issues"
+    "url": "https://github.com/gapizza/prettier-config/issues"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
   "devDependencies": {
-    "@ehacke/commitlint-config": "^2.0.0",
-    "commitizen": "^4.2.2",
-    "commitlint": "^11.0.0",
+    "@gapizza/commitlint-config": "^1.0.1",
+    "commitizen": "^4.2.3",
+    "commitlint": "^12.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "fixpack": "^3.0.6",
-    "husky": "^4.3.6"
+    "fixpack": "^4.0.0",
+    "husky": "^6.0.0"
   },
   "files": [
     "index.js"
   ],
-  "homepage": "https://github.com/ehacke/prettier-config#readme",
+  "homepage": "https://github.com/gapizza/prettier-config#readme",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -39,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehacke/prettier-config.git"
+    "url": "git+https://github.com/gapizza/prettier-config.git"
   },
   "scripts": {
     "commit": "git-cz",
