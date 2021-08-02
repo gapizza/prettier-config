@@ -45,6 +45,10 @@
       "eslint --fix"
     ]
   },
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^7.0.0"
+  },
   "main": "index.js",
   "peerDependencies": {
     "prettier": "^2.3.2"
@@ -56,6 +60,7 @@
   "scripts": {
     "beta": "npm run update:packageVersion && ./scripts/publish-beta.sh",
     "commit": "git-cz",
+    "lint:pjson": "npmPkgJsonLint .",
     "major": "npm run update:packageVersion && npm version --git-tag-version false major && npm publish && npm run tag",
     "minor": "npm run update:packageVersion && npm version --git-tag-version false minor && npm publish && npm run tag",
     "patch": "npm run update:packageVersion && npm version --git-tag-version false patch && npm publish && npm run tag",
