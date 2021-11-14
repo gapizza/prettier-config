@@ -63,5 +63,6 @@
     "tag": "git stash && git tag v\"$(npm view @gapizza/prettier-config version)\" && git push origin --tags",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:packageVersion": "cat package.json | jq \".version = \\\"$(npm view @gapizza/prettier-config version)\\\"\" > package.json"
-  }
+  },
+  "type": "module"
 }
