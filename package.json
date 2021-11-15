@@ -12,19 +12,23 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@gapizza/commitlint-config": "^1.0.1",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@gapizza/commitlint-config": "^2.0.0",
     "commitizen": "^4.2.4",
-    "commitlint": "^13.1.0",
+    "commitlint": "^14.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "fixpack": "^4.0.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.1.1",
-    "npm-package-json-lint": "^5.2.2"
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "npm-package-json-lint": "^5.4.2"
+  },
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^7.0.0"
   },
   "files": [
-    "index.js"
+    "index.cjs"
   ],
   "homepage": "https://github.com/gapizza/prettier-config#readme",
   "husky": {
@@ -45,9 +49,9 @@
       "eslint --fix"
     ]
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "peerDependencies": {
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.1"
   },
   "repository": {
     "type": "git",
@@ -56,6 +60,7 @@
   "scripts": {
     "beta": "npm run update:packageVersion && ./scripts/publish-beta.sh",
     "commit": "git-cz",
+    "lint:pjson": "npmPkgJsonLint .",
     "major": "npm run update:packageVersion && npm version --git-tag-version false major && npm publish && npm run tag",
     "minor": "npm run update:packageVersion && npm version --git-tag-version false minor && npm publish && npm run tag",
     "patch": "npm run update:packageVersion && npm version --git-tag-version false patch && npm publish && npm run tag",
@@ -63,5 +68,6 @@
     "tag": "git stash && git tag v\"$(npm view @gapizza/prettier-config version)\" && git push origin --tags",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:packageVersion": "cat package.json | jq \".version = \\\"$(npm view @gapizza/prettier-config version)\\\"\" > package.json"
-  }
+  },
+  "type": "module"
 }
